@@ -1,19 +1,22 @@
 {
-    "manifest_version": 3,
-    "name": "Autopilot",
-    "version": "1.0",
-    "description": "Identify BM cases. In case of any challenge, please contact the support team.",
-    "permissions": ["scripting", "activeTab"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ]
+  "manifest_version": 3,
+  "name": "Autopilot",
+  "version": "1.0",
+  "description": "Bot created by Moses Okoth to identify BM cases in the Audit Stage. In case of any challenges, Whatsapp: +254 714 263 898",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ], "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
   }
-  
+}
