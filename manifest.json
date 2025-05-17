@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Autopilot",
+    "version": "1.0",
+    "description": "Identify BM cases. In case of any challenge, please contact the support team.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
